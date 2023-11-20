@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        box-sizing: border-box;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        gap: 30px;
+        background: #1d2b3a
+    }
+
+    .inputBox {
+        position: relative;
+        width: 250px;
+    }
+
+    .inputBox input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgb(255, 255, 255, 0, 25);
+        border-radius: 5px;
+        outline: none;
+        color: #ffff;
+        font-size: 1em;
+    }
+
+    .inputBox span {
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        pointer-events: none;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+</style>
+
+<body>
+    <div class="inputBox">
+        <input type="text" required>
+        <span>First Name</span>
+    </div>
+    <div class="inputBox">
+        <input type="text" required>
+        <span>Last Name</span>
+    </div>
+</body>
+
+</html>
