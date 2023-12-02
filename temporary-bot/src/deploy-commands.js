@@ -6,9 +6,21 @@ const guildId = process.env.GUILD_ID;
 const rest = new REST().setToken(token);
 
 // commands
-const setup = require("./commands/setup.cmd");
+const setupCmd = require("./commands/setup.cmd");
+const lockCmd = require("./commands/lock.cmd");
+const unLockCmd = require("./commands/unLock.cmd");
+const limitCmd = require("./commands/limit.cmd");
+const nameCmd = require("./commands/name.cmd");
+const inviteCmd = require("./commands/invite.cmd");
 
-const commands = [setup.data.toJSON()];
+const commands = [
+  setupCmd.data.toJSON(),
+  lockCmd.data.toJSON(),
+  unLockCmd.data.toJSON(),
+  limitCmd.data.toJSON(),
+  nameCmd.data.toJSON(),
+  inviteCmd.data.toJSON(),
+];
 
 (async () => {
   try {

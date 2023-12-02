@@ -8,6 +8,11 @@ require("dotenv").config();
 
 // commands
 const setupCmd = require("./commands/setup.cmd");
+const lockCmd = require("./commands/lock.cmd");
+const unLockCmd = require("./commands/unLock.cmd");
+const limitCmd = require("./commands/limit.cmd");
+const nameCmd = require("./commands/name.cmd");
+const inviteCmd = require("./commands/invite.cmd");
 
 const TOKEN = process.env.BOT_TOKEN;
 const clientId = process.env.CLIENT_ID;
@@ -25,7 +30,7 @@ client.commands = new Collection();
 // client.store = new Collection();
 client.channelsStore = new Collection(); //or use mongo ...
 
-[setupCmd].map((cmd) => {
+[setupCmd, lockCmd, unLockCmd, limitCmd, nameCmd, inviteCmd].map((cmd) => {
   client.commands.set(cmd.data.name, cmd);
 });
 
